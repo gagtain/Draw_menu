@@ -1,0 +1,11 @@
+{% load tags %}
+
+    <ul>
+    {% if menu_name == url_parent_menu %}
+        <li><a href="/{{menu_name}}" style="text-decoration: none; color: blue;">{{menu_name}}</a></li>
+    {% else %}
+        <li><a href="/{{menu_name}}" style="text-decoration: none; color: black;">{{menu_name}}</a></li>
+    {% endif %}
+        {% reg_child_template dict %}
+    </ul>
+

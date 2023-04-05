@@ -1,0 +1,10 @@
+
+    {% load tags %}
+<ul>
+    {% for obj in dict %}
+    <li><a href="/{{obj.scr}}">{{obj.name}}</a></li>
+    {% if obj.child.count != 0 %}
+    {% reg_child_template obj.child %}
+    {% endif %}
+    {% endfor %}
+</ul>
